@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>综合案例-产品模块</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #cecece;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .box {
+            width: 298px;
+            height: 415px;
+            background-color: #fff;
+            /* 让块级的盒子水平居中对其 */
+            margin: 100px auto;
+        }
+
+        .box img {
+            width: 100%;
+        }
+
+        .review {
+            height: 70px;
+            font-size: 14px;
+            /* 因为这个段落没有width属性 所有padding不会撑开盒子的宽度 */
+            padding: 0 28px;
+            margin-top: 30px;
+        }
+
+        .appraise {
+            font-size: 12px;
+            color: #b0b0b0;
+            /* margin-top: 20px; */
+            padding: 0 20px;
+        }
+
+        .info {
+            font-size: 14px;
+            margin-top: 15px;
+            padding: 0 28px;
+        }
+
+        .info h4 {
+            display: inline-block;
+            font-weight: 400;
+        }
+
+        .info span {
+            color: #ff6700;
+        }
+
+        .info em {
+            font-style: normal;
+            color: #a7a6a5;
+            margin: 0 6px 0 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <a href="#">
+            <img src="img/shangcheng2.jpeg" alt="">
+            <p class="review">快递牛，烤箱颜值高，整体不错，商品很给力</p>
+        </a>
+        <div class="appraise">来自于11772837843的评价</div>
+        <div class="info">
+            <h4><a href="#">高颜值多功能小巧电烤箱...</a></h4>
+            <em>|</em>
+            <span>109元</span>
+        </div>
+    </div>
+</body>
+
+</html>

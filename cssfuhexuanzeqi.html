@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css后代选择器之子选择器</title>
+    <style>
+        ol li {
+            color: pink;
+        }
+        ol li a {
+            color: red;
+        }
+        .nav li a {
+            color: yellow;
+        }
+
+        .nav>a {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<ol>
+    <li>我是ol的子集就是儿子</li>
+    <li>我是ol的子集就是儿子</li>
+    <li>我是ol的子集就是儿子</li>
+    <li><a href="#"> 我是第三代 孙子 </a> </li>
+</ol>
+<ul>
+    <li>我是ul的子集就是儿子</li>
+    <li>我是ul的子集就是儿子</li>
+    <li>我是ul的子集就是儿子</li>
+</ul>
+<ul class="nav">
+    <li>我是ul的子集就是儿子</li>
+    <li>我是ul的子集就是儿子</li>
+    <li><a href="#"> 我是第三代 孙子 </a> </li>
+</ul>
+
+
+<div class="nav">
+    <a href="#"> 我是子集儿子</a>
+    <p>
+        <a href="#"> 我是子集孙子</a>
+    </p>
+
+</div>
+</body>
+</html>

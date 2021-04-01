@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型之边框</title>
+    <style>
+       /* div */ {
+            width: 300px;
+            height: 200px;
+            /* border-width 边框的粗细一般单位用px */
+            border-width: 5px;
+            /* border-style 边框样式 solid实线边框 dashed虚线边框 dotted点线边框 */
+            /* border-style: solid; */
+            /* border-style: dashed; */
+            border-style: dotted;
+            border-color: pink;
+        }
+        /* 一个正方形的盒子,设置上边框为红色其他三条边是蓝色 */
+        div {
+            width: 200px;
+            height: 200px;
+            /* 每条都设置一个颜色上下左右 */
+            /* border-top: 1px solid red;
+            border-bottom: 1px solid blue;
+            border-left: 1px solid blue;
+            border-right: 1px solid blue; */
+
+            /* border 包含四条边 */
+
+            border: 1px solid blue;
+            /* 层叠性只是层叠了上边的边层叠的边位置要在下面，就近原则 */
+
+            border-top: 1px solid red;
+        }
+
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

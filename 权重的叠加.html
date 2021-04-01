@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>权重的叠加</title>
+    <style>
+        /* 复合选择器会有权重叠加的效果 */
+       
+        ul li {
+            color:green;
+        }
+        li {
+            color: red !important;
+        }
+        /* 什么都不加的是“标签选择器最小”加.的是类选择器大于“标签选择器”然后是加#的id选择器大于“类选择器” */
+        /* 在后面是行内选择器"style=""最后是加！important"最大的选择器 */
+        .nav li { 
+            color: pink;
+        }
+        .nav .green {
+            color: green;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li>酱肘子</li>
+        <li style="color: indigo;">大龙虾</li>
+        <li class="green">大螃蟹</li>
+    </ul>
+</body>
+</html>
