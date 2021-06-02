@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS三角强化</title>
+    <style>
+        /* 这是第一种写法，代码比较多 */
+        .box1 {
+            /* 先做一个只有边框的盒子，下，左的边框宽度为0,上边框的宽度大于右边框就可以了。 */
+            width: 0;
+            height: 0;
+            /* 把上边款的颜色改成透明色,transparen */
+            border-top: 100px solid transparent;
+            border-right: 50px solid pink;
+            border-bottom: 0 solid skyblue;
+            border-left: 0 solid green;
+        }
+        /* 第二种写法代码比较少 */
+        .box2 {
+            width: 0;
+            height: 0;
+            /* 1,只保留右边边框的颜色，其他都是透明色 */
+            border-color: transparent red transparent transparent;
+            /* 2,边框的样式都是实线solid */
+            border-style: solid;
+            /* 3,边框的宽度上边框要大，右边框要小，其余的都是 0 */
+            border-width: 100px 50px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>
