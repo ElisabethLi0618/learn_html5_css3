@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //案例1，
+        // var num = 10;
+        // fun();
+        // function fun() {
+        //     console.log(num);
+        //     var num = 20;
+        // }
+        //相当于一下操作
+        // var num;
+        // function fun() {
+        //     var num;
+        //     console.log(num);
+        //     num = 20;
+        // }
+        // num = 10;
+        // fun();
+
+        //案例2
+        var num = 10;
+        function fu() {
+            console.log(num);
+            var num = 20;
+            console.log(num);
+        }
+        fu();
+        //相当于以下操作
+        // var num;
+        // function fu(){
+        //     var num;
+        //     console.log(num);
+        //     num = 20;
+        //     console.log(num);
+        // }
+        // num = 10;
+        // fu();
+
+        //案例3
+        // var a = 14;
+        // f1();
+        // function f1() {
+        //     var b = 9;
+        //     console.log(a);
+        //     console.log(b);
+        //     var a = '123';
+        // }
+        //相当于以下操作
+        // var a;
+        // function f1(){
+        //     var b;
+        //     var a;
+        //     b = 9;
+        //     console.log(a);//这里a没有值
+        //     console.log(b);//就近原则这是是9，
+        //     a = '123';
+        // }
+        // a = 14;
+        // f1();
+
+        //案例4
+        f1();
+        console.log(c);
+        console.log(b);
+        console.log(a);
+
+        function f1() {
+            var a = b = c = 9;
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+        //相当于以下操作
+        // function f1() {
+        //     var a
+        //     a = b = c = 9; 
+        //     //相当于 var a = 9; b=9;c=9; b和c直接赋值，没有var 声明，当全局变量看；
+        //     //集体声明 var a = 9, b = 9, c = 9;是用逗号不是分号
+        //     console.log(a);  9
+        //     console.log(b);
+        //     console.log(c);
+        // }
+        // f1();
+        // console.log(c);
+        // console.log(b);
+        // console.log(a);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
