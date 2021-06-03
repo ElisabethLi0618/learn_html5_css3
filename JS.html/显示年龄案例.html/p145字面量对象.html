@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var obj = {
+            uname: '可可',
+            type: '阿拉斯加犬',
+            age: '5岁',
+            colour: '棕红色',
+            bark: function () {
+                console.log('演电影')
+            }
+        }
+        console.log(obj['uname']);
+        console.log(obj.type);
+
+        //利用new Object 创建对象；
+        var obj = new Object();
+        obj.uname = '哈士奇巴哥';
+        obj.age = 18;
+        obj.sex = '男';
+        obj.sayHi = function () {
+            console.log('hi~');
+        }
+        console.log(obj.uname);
+        console.log(obj.sex);
+        console.log(obj['age']);
+        obj.sayHi();
+
+
+
+        //作业利用new Object 做
+        var obj = new Object;
+        obj.uname = '鸣人';
+        obj.age = 19;
+        obj.sex = '男';
+        obj.skill = function () {
+            console.log('影分身术')
+        }
+        console.log(obj.uname);
+        console.log(obj['age']);
+        obj.skill();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
