@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1,创建一个电脑对象，有颜色，重量，品牌，型号，可以看电影，听音乐，打游戏和敲代码。
+        // (1)利用构造函数创建对象
+        // function 构造函数名（）{
+        //     this.属性 = 值；
+        //     this.方法 = function(){
+
+        //     }
+        // }
+        function Computer(colour, weight, brand, type) {
+            this.colour = colour;
+            this.weight = weight;
+            this.brand = brand;
+            this.type = type;
+            this.ff = function (f) {
+                console.log(f);
+            }
+        }
+        var comp = new Computer('粉色', '1kg', 'lianxiang', 4732)
+        console.log(comp.colour);
+        console.log(comp.brand);
+        console.log(comp.type);
+
+        // (2)利用new Object 创建对象
+        var obj = new Object();
+        obj.colour = '粉色';
+        obj.weight = '1kg';
+        obj.brand = '苹果';
+        obj.type = 'z2341';
+        obj.gongneng = function () {
+            console.log('看定影，打游戏，听音乐和敲代码');
+        }
+        console.log(obj.colour);
+        console.log(obj.type);
+        console.log(obj['brand']);
+        obj.gongneng();
+
+        // (3)利用对象字面量创建对象
+        var obj = {
+            colour: '蓝色',
+            weight: '1kg',
+            brand: '苹果',
+            type: 'av231',
+            gongneng: function () {
+                console.log('看电影，打游戏，听音乐和敲代码');
+            }
+        }
+        console.log(obj.weight);
+        console.log(obj.brand);
+        obj.gongneng();
+
+
+
+        //2,创建一个按钮对象，包含宽，高，背景颜色，和点击行为。
+        //(1)利用对象字面量创建对象
+        var obj = {
+            width: '12px',
+            height: '20px',
+            colour: 'red',
+            xingwei: function () {
+                console.log('点击');
+            }
+        }
+        console.log(obj);
+        obj.xingwei();
+
+        // (2)利用new Object 创建对象
+        var obj = new Object();
+        obj.width = '20px';
+        obj.height = '40px';
+        obj.colour = 'pink';
+        obj.xingwei = function () {
+            console.log('点击按钮');
+        }
+        console.log(obj.width);
+        console.log(obj.colour);
+        obj.xingwei();
+
+        //（3）利用构造函数创建对象
+        function Button(width, height, colour) {
+            this.width = width;
+            this.height = height;
+            this.colour = colour;
+            this.xingwei = function () {
+                console.log('点击按钮');
+            }
+        }
+        var anniu = new Button('30px', '25px', 'pink');
+        console.log(anniu.colour);
+        console.log(anniu.height);
+
+
+
+
+        //3，创建一个车对象，有重量，颜色，牌子，可以载人，拉货和耕田。
+        //(1)利用对象字面量创建对象
+        var obj = {
+            weight: '500kg',
+            colour: 'black',
+            brand: 'mini',
+            gongneng: function () {
+                console.log('代步，载人，拉货，耕地');
+            }
+        }
+        console.log(obj.colour);
+        console.log(obj.brand);
+        obj.gongneng();
+
+        // (2)利用new Object 创建对象
+        var obj = new Object();
+        obj.weight = '500kg';
+        obj.colour = 'blue';
+        obj.brand = '宝马';
+        obj.gongneng = function () {
+            console.log('代步，载人，拉货，耕地');
+        }
+        console.log(obj.weight);
+        console.log(obj.brand);
+        obj.gongneng();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
