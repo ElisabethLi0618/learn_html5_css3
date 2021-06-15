@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1,查找字符串‘"oabcefoxyozzopp"’；里O出现的位置和次数。
+        var str = "oabcefoxyozzopp";
+        var index = str.indexOf('o');
+        var num = 0;
+        while (index !== -1) {
+            console.log(index);
+            num++;
+            index = str.indexOf('o', index + 1);
+        }
+        console.log('o出现的次数：' + num);
+
+        //1,1查找字符串“liyingzhouyushenghelili”;里面的i出现的位置和次数
+
+        var str = 'liyingzhouyushenghelili';
+        var index1 = str.indexOf('i');
+        var num1 = 0;
+        while (index1 !== -1) {
+            console.log(index1);
+            num1++;
+            index1 = str.indexOf('i', index1 + 1);
+        }
+        console.log('i出现的次数：' + num1);
+
+
+        //2,作业查找数组['red', 'blue', 'red', 'green', 'pink', 'red'],求red出现的位置和次数
+        var arr = ['red', 'blue', 'red', 'green', 'pink', 'red'];
+        var index = arr.indexOf('red');
+        var num = 0;
+        while (index !== -1) {
+            console.log(index);
+            num++;
+            index = arr.indexOf('red', index + 1);
+        }
+        console.log('red出现的次数：' + num);
+
+        //3,根据位置返回字符串。
+        var str = 'andy';
+        console.log(str.charAt(3));
+        //遍历所有的字符串；
+        for (var i = 0; i < str.length; i++) {
+            console.log(str.charAt(i));
+        }
+        //str[index]H5新增的
+        console.log(str[2]);
+
+        //4,统计出现最多的字符和次数；“liyingzhouyushenghelili”
+        var str = 'liyingzhouyushenghelili';
+        var o = {};
+        for (var i = 0; i < str.length; i++) {
+            var chars = str.charAt(i); //chars 是代表字符串里的每一个字符。
+            if (o[chars]) { //o[chars] 得到的是属性值
+                o[chars]++;
+            } else {
+                o[chars] = 1;
+            }
+        }
+        console.log(o);
+
+        //4.1遍历对象
+        var max = 0;
+        var ch = '';
+        for (var k in o) {
+            //k 得到是 属性名
+            //o[k] 得到的是属性值
+            if (o[k] > max) {
+                max = o[k];
+                ch = k;
+            }
+        }
+        console.log(max);
+        console.log('最多的字符是：' + ch);
+
+        //5,字符串操作
+        //concat('字符串1', '字符串2'....)
+        var str = 'andy';
+        console.log(str.concat('red'));
+
+        //substr('截取的起始位置，' ‘截取几个字符’)
+        var str1 = '吹风吹又吹';
+        console.log(str1.substr(2, 3));
+
+        //6,替换字符 replace('被替换的字符' '替换为的字符') 只会替换一个字符
+        var str = 'andyandy';
+        console.log(str.replace('a', 'b'));
+
+        //6,1 要求字符串‘liyingzhouyushenghelili’里面所有的i替换成*
+        var str1 = 'liyingzhouyushenghelili';
+        while (str1.indexOf('i') !== -1) {
+            str1 = str1.replace('i', '*');
+        }
+        console.log(str1);
+
+        //6,2字符转换为数组，split('分隔符') join 是把数组转换为字符串
+        var str2 = 'red, pink, blue, yellow';
+        console.log(str2.split(','));
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
