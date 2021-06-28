@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .change {
+            background-color: yellow;
+            color: #fff;
+            font-size: 25px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first">这是一个盒子</div>
+    <script>
+        //1,获取元素
+        var test = document.querySelector('div');
+        test.onclick = function () {
+            //上面类名change 就代替了下面的这四个 this
+            //    this.style.backgroundColor = 'yellow';
+            //    this.style.color = '#fff';
+            //    this.style.fontSize = '25px';
+            //    this.style.marginTop = '100PX';
+            //2,可以通过修改元素的className 更改元素的样式，使用于样式较多或者功能复杂的情况、
+            //3,保留原先类名，可以多类名选择器
+            this.className = 'first change';
+        }
+    </script>
+
+</body>
+
+</html>
