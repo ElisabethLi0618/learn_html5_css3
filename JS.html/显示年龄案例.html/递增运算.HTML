@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = 10;
+        ++a;   //++a 就等于 a+1=10+1=11   所以++a是11,a也是11
+        var b = ++a + 2;    //因为上面a已经是11了。现在的++a就是12,所以输出的结果就是12+2=14
+        console.log(b);   //14
+
+        var c = 10;   
+        c++;   //c++ 就是11 上面的c就是11了
+        var d = c++ + 2;  //因为是后置递增所以c++就直接把上面的结果11返回去，所以现在的c++还是11。，但是返回之后要在+1,所以c就是12. 
+        console.log(d);  //11+2=13
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

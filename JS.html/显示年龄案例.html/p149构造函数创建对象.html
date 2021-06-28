@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //语法格式
+
+        // function 构造函数名() {
+        //     this.属性 = 值；
+        //     this.方法 = function () {
+
+        //     }
+        // }
+        //new 构造函数名（）
+        function Star(uname, age, sex) {
+            this.name = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function (sang) {
+                console.log(sang);
+            }
+        }
+        var liudehua = new Star('刘德华', 18, '男');
+        console.log(liudehua.name);
+        console.log(liudehua.age);
+        console.log(liudehua['sex']);
+        liudehua.sing('冰雨');
+
+        var zxy = new Star('张学友', 20, '男');
+        console.log(zxy.name);
+        console.log(zxy.age);
+        zxy.sing('慢慢的')
+
+
+        //作业游戏英雄
+        function yx(uname, type, blood) {
+            this.name = uname;
+            this.type = type;
+            this.blood = blood;
+            this.attack = function (ck) {
+                console.log(ck);
+            }
+        }
+        var lp = new yx('廉颇', '力量型', '500血量', '近程');
+        console.log(lp.name);
+        console.log(lp['type']);
+        lp.attack('近战');
+        console.log(lp);
+
+        var hy = new yx('后羿', '射手性', '100血量', '远程');
+        console.log(hy.name);
+        console.log(hy.blood);
+        hy.attack('远程');
+
+
+        //遍历对象
+        var obj = {
+            name: '小白',
+            age: 2,
+            sex: '男',
+        }
+        for (var k in obj) {
+            console.log(k);
+            console.log(obj[k]);
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

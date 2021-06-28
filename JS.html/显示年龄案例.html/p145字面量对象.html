@@ -16,8 +16,33 @@
                 console.log('演电影')
             }
         }
-        console.log(obj['uname']);
+        //console.log(obj['uname']);
         console.log(obj.type);
+
+        var obj = {
+            uname: '小宇',
+            sex: '男',
+            age: 25,
+            like: function () {
+                console.log('bbc')
+            }
+
+        }
+        console.log(obj['uname']);
+        console.log(obj.sex);
+
+        var obj = {
+            uname: '小樱',
+            sex: '女',
+            age: 13,
+            like: function () {
+                console.log('动漫');
+            }
+        }
+        console.log(obj.uname);
+        console.log(obj['sex']);
+
+
 
         //利用new Object 创建对象；
         var obj = new Object();
@@ -32,19 +57,39 @@
         console.log(obj['age']);
         obj.sayHi();
 
+        //练习
+        var obj = new Object();
+        obj.uname = '巴卡拉卡';
+        obj.age = 2;
+        obj.type = '布偶猫';
+        obj.sex = '女';
+        obj.sayHi = function () {
+            console.log('喵~');
+        }
+        console.log(obj);
+
+
+
 
 
         //作业利用new Object 做
-        var obj = new Object;
+        var obj = new Object();
         obj.uname = '鸣人';
         obj.age = 19;
         obj.sex = '男';
         obj.skill = function () {
             console.log('影分身术')
         }
+        //console.log(obj);就可以输出全部信息
         console.log(obj.uname);
         console.log(obj['age']);
         obj.skill();
+
+        // var obj = new Object;
+        // obj. uname = '流川枫';
+        // obj. sex = '男';
+        // obj.age = 12;
+
     </script>
 </head>
 

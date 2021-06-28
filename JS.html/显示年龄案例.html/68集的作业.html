@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 第1题，判断时间段。
+        // var time = prompt('请输入时间');
+        // if(time < 12){
+        //     alert('中外好')
+        // }else if(time < 18){
+        //     alert('傍晚好')
+        // }else if (time < 24){
+        //     alert('深夜好')
+        // }
+
+        // 第2题，比较两个数的大小，弹出最大的数。
+        // var num1 = prompt('请输入一个数字');
+        // var num2 = prompt('请再输入一个数字');
+        // if(num1 > num2){
+        //     alert(num1)
+        // }else {
+        //    alert(num2)
+        // }
+
+
+
+        // 第3题，用户输入一个数，判断是奇数还是偶数。
+
+        // var num = prompt('请输入一个数字');
+        // if(num % 2 == 0){
+        //     alert('这个数字是偶数')
+        // }else {
+        //     alert('你输入的数字是奇数')
+        // }
+
+
+        // 第4题，输入数字1--7,返回星期几。
+        // var week = prompt('请输入1--7之间的数字');
+        // switch (week){
+        //     case '1':
+        //         alert('星期一');
+        //         break;
+        //     case '2':
+        //         alert('星期二');
+        //         break;
+        //      case '3':
+        //         alert('星期三');
+        //         break;
+        //     case '4':
+        //         alert('星期四');
+        //         break;
+        //     case '5':
+        //         alert('星期五');
+        //         break;
+        //      case '6':
+        //         alert('星期六');
+        //         break;
+        //     case '7':
+        //         alert('星期七');
+        //         break;
+        //         default:
+        //             alert('无')
+
+        // }
+
+        do {
+            var xz = parseFloat(prompt('欢迎使用简单计算器:' + '\n' + '1.加法' + '\n' + '2.减法'
+                + '\n' + '3.乘法' + '\n' + '4.除法' + '\n' + '5.退出'));
+            function k() {
+                num1 = parseFloat(prompt('请输入第一个数'))
+                num2 = parseFloat(prompt('请输入第二个数'))
+            }
+            switch (xz) {
+                case 1:
+                    k()
+                    alert('结果是' + (num1 + num2))
+                    break
+                case 2:
+                    k()
+                    alert('结果是' + (num1 - num2))
+                    break
+                case 3:
+                    k()
+                    alert('结果是' + (num1 * num2))
+                    break
+                case 4:
+                    k()
+                    alert('结果是' + (num1 / num2))
+                    break
+                case 5:
+                    break
+            }
+        } while (xz !== 5)
+
+        //5,5 switch 语句练习。
+        switch (5) {
+            case 1:
+                console.log('这是1');
+                break;
+            case 2:
+                console.log('这是2');
+                break;
+            case 3:
+                console.log('这是3');
+                break;
+            case 4:
+                console.log('这是4');
+                break;
+            default:
+                console.log('没有这个数字');
+
+        }
+
+        // 第5题，判断范围
+        // var num = prompt('请输入数字');
+        // if(num >= 2000){
+        //     alert('请大家吃西餐')
+        // }else if(num >=1500){
+        //     alert('请大家吃快餐')
+        // }else if(num >= 1000){
+        //     alert('请大家喝饮料')
+        // }else if(num >= 500){
+        //     alert('请大家吃棒棒糖')
+        // }else{
+        //     alert('请下次记得多带钱')
+        // }
+
+        // 第6题，判断等级A B C D E等级
+    // var num = prompt('请输入你的分数');
+    // if(num >= 90){
+    //     alert('A')
+    // }else if(num >= 80){
+    //     alert('B')
+    // }else if(num >= 70){
+    //     alert('C')
+    // }else if(num >= 60){
+    //     alert('还不错，你可以更棒哦')
+    // }else if(num < 60){
+    //     alert('你很有潜力哦，加油')
+    // }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

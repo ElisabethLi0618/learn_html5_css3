@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        for (var i = i; i < 100; i++) {
+            console.log('你好吗');
+        }
+
+        // for 循环案例
+
+        // p77的作业
+        // 1-100的整数和
+        // var sum = 0;
+        // for (var i = 1; i <= 100; i++) {
+        //     sum = sum + i;
+        // }
+        // console.log(sum);
+
+        // 用do while 循环体，做1-100的整数和
+        var sum = 0;
+        var j = 1;
+        do {
+            sum = sum + j;
+            j++;
+        } while (j <= 100)
+        console.log(sum);
+
+
+
+        // 1,求1-100之间所有的偶数和奇数的和各是多少？ 变量偶数even  变量奇数odd
+        var even = 0;
+        var odd = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                even = even + i;
+            } else {
+                odd = odd + i;
+            }
+        }
+        console.log('1-100 之间的偶数和是' + even);
+        console.log('1-100 之间的奇数和是' + odd);
+
+        // 2,求1-100能被3整除的所有数字之和
+        var num = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 == 0) {
+                num = num + i;
+            }
+        }
+        console.log('1-100被3整除的数值和是：' + num);
+
+        // 3,求1-100之间能被5整除的数字和是.还有不能被5整除的数之和是？
+
+        var num = 0;
+        var num2 = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 5 == 0) {
+                num = num + i;
+            } else {
+                num2 = num2 + i;
+            }
+        }
+        console.log('1-100直接能被5整除的数之和是：' + num);
+        console.log('1-100不能被5整除的数之和是：' + num2);
+
+        // p84作业
+        // 打印到三角案例
+        // var str = '';
+        // for(AZSDCFGHJMKL.;/'
+        var i = 1; i <= 10; i++) {
+            //     for(var j = i; j <= 10; j++){
+            //         str = str + '☆';
+            //     }
+            //     str += '\n';
+            // }
+            // console.log(str);
+
+
+            var str = ' ';
+            for (var i = 1; i <= 5; i++) {
+                for (var j = 1; j <= 5; j++) {
+                    str = str + '☆'
+                }
+                str = str + '\n'
+            }
+            console.log(str);
+
+            // 5,do while 作业 弹出一个提示框，问你爱我吗？如果回答不是我爱你，就一直重复弹出。
+            // do {
+            //     var miss = prompt('你爱我吗？');
+            // }while(miss !== '我爱你')
+            // alert('我也爱你呀')
+
+            // 6, while 循环题做上面的题
+            var miss = prompt('你爱我吗？')
+            while (miss !== '我爱你') {
+                miss = prompt('你爱我吗？');
+            } alert('我也爱你呀')
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //1,用户输入任意两个数，计算返回出结果
+
+      //2,利用函数求任意数组里面的最大值。‘arguments'
+      function getMax() {
+        var max = arguments[0];
+        for (var i = 1; i < arguments.length; i++) {
+          if (arguments[i] > max) {
+            max = arguments[i];
+          }
+        }
+        return max;
+      }
+      console.log(getMax[(1, 2, 3, 4)]);
+
+      //2,,利用函数任意翻转数组  reverse  翻转的意思。
+      // function reverse(arr) {
+      // var newArr = [];
+      // for (var i = arr.length - 1; i >= 0; i--) {
+      //  newArr[newArr.length] = arr[i];
+      // }
+      // return newArr;
+      // /}
+      // var arr1 = reverse([1, 2, 3, 4, 5, 9]);
+
+      // 3,,,利用函数冒泡排序 sort;
+      function sort(arr) {
+        for (var i = 0; i <= arr.length - 1; i++) {
+          for (var j = 0; j <= arr.length - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+              var temp = arr[j];
+              arr[j] = arr[j + 1];
+              arr[j + 1] = temp;
+            }
+          }
+        }
+        return arr;
+      }
+      var arr = sort([2, 4, 44, 66, 45, 7]);
+      console.log(arr);
+    </script>
+  </head>
+  <body></body>
+</html>

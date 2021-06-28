@@ -52,7 +52,7 @@
         //str[index]H5新增的
         console.log(str[2]);
 
-        //4,统计出现最多的字符和次数；“liyingzhouyushenghelili”
+        //4,统计出现最多的字符和次数；“liyingzhouyushenghelili”**************
         var str = 'liyingzhouyushenghelili';
         var o = {};
         for (var i = 0; i < str.length; i++) {
@@ -102,6 +102,47 @@
         //6,2字符转换为数组，split('分隔符') join 是把数组转换为字符串
         var str2 = 'red, pink, blue, yellow';
         console.log(str2.split(','));
+
+        //p186作业
+        // 给出一个字符串如‘abngkafijnjdbflglajjeih3234776’,问题如下
+        // 1，字符串的长度，
+        var str = 'abngkafijnjdbflglajjeih3234776';
+        console.log(str.length);
+
+        // 2，取出指定位置的字符如‘0，3，8，9’等
+        console.log(str.charAt(0));
+        console.log(str.charAt(3));
+        console.log(str.charAt(8));
+        console.log(str.charAt(9));
+        // 3，查找指定字符是否在上面字符串中出现过‘i,o,r’等，
+
+
+        // 4，替换字符如g替换成##，l替换成**；等操作方法
+        var str1 = 'abngkafijnjdbflglajjeih3234776';
+        while (str1.indexOf('g') !== -1) {
+            str1 = str1.replace('g', '##');
+        }
+        while (str1.indexOf('l') !== -1) {
+            str1 = str1.replace('l', '**');
+        }
+        console.log(str1);
+
+        // 5，截取指定位置开始到结束位置的字符串如取‘2-6’的字符串
+        var str3 = 'abngkafijnjdbflglajjeih3234776';
+        console.log(str3.substr(2, 6));
+
+        //6,找出字符串里出现最多次数的字符，出现了几次？
+        var str4 = 'abngkafijnjdbflglajjeih3234776';
+        var o = {};
+        for (var i = 0; i < str4.length; i++) {
+            var chars = str4.charAt(i);
+            if (o[chars]) {
+                o[chars]++;
+            } else {
+                o[chars] = 1;
+            }
+        }
+        console.log(o);
 
     </script>
 </head>

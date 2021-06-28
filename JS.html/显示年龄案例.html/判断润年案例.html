@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 算法：能被4整除，且不能被100整除，是润年。或者能被400整除的也是润年。
+        // 第一步：弹出prompt输入框，提示用户输入年份，把这个值取过来保存到变量中。
+        // 第二部：使用if语句来判断是否为润年，如果是就执行大括号的输出语句，否在执行else里面的输出语句。
+        // 注意；里面的 且 && 还有 或 || 的写法，同时注意判断整除的方法是取余为 0
+        var year = prompt('请输入年份');
+        if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            alert('你输入的年份是润年')
+        }else {
+             alert('你输入的年份是平年')
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

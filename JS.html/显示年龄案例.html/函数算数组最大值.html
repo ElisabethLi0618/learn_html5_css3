@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //4,利用函数求数组[1,34,44,23,5,88,124,65]里面的最大值
+      function getArrMax(arr) {
+        var Max = 0;
+        for (var i = 0; i < arr.length; i++) {
+          if (arr[i] > Max) {
+            Max = arr[i];
+          }
+        }
+        return Max;
+      }
+      var re = getArrMax([1, 34, 44, 23, 5, 88, 124, 65]);
+      console.log(re);
+
+      //4,1 利用函数求数组[23,2,43,55,76,28,11,1 ]中最小值
+      function getArrSin(arr) {
+        var sin = 0;
+        for (var i = 0; i < arr.length; i++) {
+          if (arr[i] < sin) {
+            sin = arr[i];
+          }
+        }
+        return sin;
+      }
+      var re = getArrSin([23, 2, 43, 55, 76, 28, 11, 0]);
+      console.log(re);
+
+      //3,求任意两个数的加减乘除的结果
+      function getResult(num1, num2) {
+        return [num1 + num2, num1 - num2, num1 * num2, num1 / num2];
+      }
+      var re = getResult(2, 3);
+      console.log(re);
+    </script>
+  </head>
+  <body></body>
+</html>
