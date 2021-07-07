@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <button id="kx">烤箱</button>
+    <button id="guo">多功能锅</button><br>
+    <img src="../img/shangcheng2.jpeg" alt=""  title="烤箱">
+
+    <script>
+        //修改元素属性 src 
+        //1, 获取元素
+        var kx = document.getElementById('kx');
+        var guo = document.getElementById('guo');
+        var img = document.querySelector('img');
+        //2, 注册事件 处理程序
+        kx.onclick = function(){
+            img.src = '../img/shangcheng2.jpeg';
+            img.title = '这是烤箱'
+        }
+        guo.onclick = function(){
+            img.src='../img/shangcheng4.jpeg';
+            img.title = '多功能锅';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <img src="../../img/index2.gif" alt="">
+    <div>
+        上午好
+    </div>
+    <script>
+        //1,获取元素 
+        var img = document.querySelector('img');
+        var div = document.querySelector('div');
+        //2, 得到当前的时间
+        var date = new Date();
+        var h = date.getHours();
+        //3, 判断时间改变图片和文字信息
+        if(h < 12){
+            img.src = '../../img/index2.gif';
+            div.innerHTML = '上午好，请好好写代码';
+        }else if(h < 18){
+           img.src = '../../img/index2.gif';
+            div.innerHTML = '下午好，请好好写代码';
+
+        }else {
+            img.src = '../../img/index3.gif';
+            div.innerHTML = '晚上好，请好好写代码';
+        }
+    </script>
+</body>
+</html>
