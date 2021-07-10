@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 600px;
+            margin: 100px auto;
+            text-align: center;
+            border-collapse: collapse;
+            font-size: 14px;
+
+        }
+
+        thead tr {
+            height: 30px;
+            background-color: skyblue;
+        }
+        tbody tr {
+            height: 30px;
+        }
+
+        tbody td {
+            border-bottom: 1px solid #d7d7d7;
+            font-size: 12px;
+            color: blue;
+        }
+
+        .bg {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>周日</td>
+                <td>周一</td>
+                <td>周二</td>
+                <td>周三</td>
+                <td>周四</td>
+                <td>周五</td>
+                <td>周六</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>写代码</td>
+                <td>看课程</td>
+                <td>看电视</td>
+                <td>写代码</td>
+                <td>看电视</td>
+                <td>写代码</td>
+                <td>看课程</td>
+            </tr>
+            <tr>
+                <td>写代码</td>
+                <td>看课程</td>
+                <td>看电视</td>
+                <td>写代码</td>
+                <td>看电视</td>
+                <td>写代码</td>
+                <td>看课程</td>
+            </tr>
+            <tr>
+                <td>写代码</td>
+                <td>看课程</td>
+                <td>看电视</td>
+                <td>写代码</td>
+                <td>看电视</td>
+                <td>写代码</td>
+                <td>看课程</td>
+            </tr>
+            <tr>
+                <td>写代码</td>
+                <td>看课程</td>
+                <td>看电视</td>
+                <td>写代码</td>
+                <td>看电视</td>
+                <td>写代码</td>
+                <td>看课程</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        //1,获取元素 获取所有的tbody 里面的行 
+        var trs = document.querySelector('tbody').querySelectorAll('tr');
+
+        //2, 利用循环 绑定事件 函数
+        for(var i = 0; i < trs.length; i++){
+            //3, 鼠标经过 onmouseover 
+            trs[i].onmouseover = function(){
+                this.className = 'bg';
+            }
+            //4, 鼠标离开事件 onmouseout
+            trs[i].onmouseout =function(){
+                this.className = '';
+            }
+
+        }
+    </script>
+</body>
+</html>
