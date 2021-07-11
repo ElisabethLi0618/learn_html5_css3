@@ -93,9 +93,8 @@
         var j_cbAll = document.getElementById('j_cbAll');//全选按钮
         var j_tbs = document.getElementById('j_tb').getElementsByTagName('input');//下面的复选框
         
-        //2, 注册事件
-
-        j_cbAll.onclick = function(){
+        // 注册事件
+            j_cbAll.onclick = function(){
             //this.checked 它可以得到当前复选框的选中状态  如果是true 就是选中 如果是false 就是未选中
             console.log(this.checked);
             for(var i = 0; i < j_tbs.length; i++){
@@ -103,6 +102,24 @@
             }
         }
 
+        //2, 下面复选框按钮全部选中 上面就选中 给下面复选框绑定点击事件 
+        //每次点击都要循环查看下面所有的复选框是否选中，如果有一个没有选中，上面全选就不选中
+
+        for (var i = 0; i < j_tbs.length; i++){
+            j_tbs[i].onclick =function(){
+                // flag 控制全选按钮是否选中
+                var flag = true;
+                //每次点击下面的复选框都要循环检查4个小按钮是否全被选中
+                for (var i = 0; i < j_tbs.length; i++){
+                    if(!j_tbs[i].checked){
+                        flag = false;
+                        break; //退出for循环 这样可以提高执行效率 因为只有一个没有选中，剩下的就无需循环判断了
+                    }
+                } 
+                j_cbAll.checked = flag;
+            }
+        }
+        
     </script>
 </body>
 </html>
